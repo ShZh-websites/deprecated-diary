@@ -4,7 +4,7 @@
       <a href="/">首页</a>
     </li>
     <li>
-      <a href="/">归档</a>
+      <a href="/archive">归档</a>
     </li>
     <li>
       <a href="/">留言</a>

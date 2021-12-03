@@ -9,7 +9,13 @@
     {#each items as item}
       <li>
         <div class="date">{item.date}</div>
-        <div class="content">{item.content}</div>
+        {#if item.link}
+          <a href={item.link}>
+            <div class="content">{item.content}</div>
+          </a>
+        {:else}
+          <div class="content">{item.content}</div>
+        {/if}
       </li>
     {/each}
   </ul>
