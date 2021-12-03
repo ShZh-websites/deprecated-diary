@@ -8,13 +8,13 @@
 </script>
 
 <script>
-  import News from "$lib/News.svelte"
+  import DateList from "$lib/DateList.svelte"
 
   export let news
 </script>
 
 <svelte:head>
-  <title>日记本 ｜ 首页</title>
+  <title>日记本 | 首页</title>
 </svelte:head>
 
 <figure>
@@ -28,7 +28,7 @@
   <p>希望我的文字能给你带来一点启发，如果你觉得对你有帮助，你可以给我买一杯咖啡☕️。</p>
 </section>
 
-<News {news}/>
+<DateList title={"News"} items={news} />
 
 <style lang="scss">
   figure {
