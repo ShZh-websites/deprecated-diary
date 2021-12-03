@@ -33,7 +33,6 @@
         list-style-type: none;
 
         a {
-          color: black;
           font-family: "Source Sans Pro", "Noto Sans SC", sans-serif;
           text-decoration: none;
         }

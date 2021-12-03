@@ -11,7 +11,7 @@
         <div class="date">{item.date}</div>
         {#if item.link}
           <a href={item.link}>
-            <div class="content">{item.content}</div>
+            <div class="content">{item.title}</div>
           </a>
         {:else}
           <div class="content">{item.content}</div>

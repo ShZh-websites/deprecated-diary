@@ -1,22 +1,21 @@
+<script context="module">
+  export async function load({ fetch }) {
+    const postList =  await fetch('/api/posts.json').then((r) => r.json());
+
+    return {
+      props: { postList }
+    }
+  }
+</script>
+
 <script>
   import DateList from "$lib/DateList.svelte";
 
-  export let data = [
-    {
-      date: 'Dec 1, 2021',
-      content: 'HelloWorld',
-      link: '/posts/create-your-blog',
-    },
-    {
-      date: 'Nov 12, 2021',
-      content: '114514',
-      link: 'https://zhihu.com'
-    },
-  ]
+  export let postList;
 </script>
 
 <div class="container">
-  <DateList title={2021} items={data}/>
+  <DateList title={2021} items={postList}/>
 </div>
 
 <style lang="scss">
