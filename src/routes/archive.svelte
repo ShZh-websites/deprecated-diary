@@ -16,6 +16,10 @@
   export let postList;
 </script>
 
+<svelte:head>
+  <title>日记本 | 归档</title>
+</svelte:head>
+
 <div class="container">
   <PostList year={2021} items={postList}/>
 </div>

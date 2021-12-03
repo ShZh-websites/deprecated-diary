@@ -23,7 +23,6 @@
   <title>{postInfo.title}</title>
 </svelte:head>
 
-
 <article>
   <h1 class="article-title">{postInfo.title}</h1>
   {@html markup}
