@@ -1,4 +1,4 @@
-export function dateFormat(date) {
+export function dateFormatEN(date) {
   let monthAbbr;
   switch (date.getMonth() + 1) {
     case 1: monthAbbr = 'Jan'; break;
@@ -16,4 +16,12 @@ export function dateFormat(date) {
   }
 
   return `${monthAbbr} ${date.getDay()}`;
+}
+
+export function dateFormatCN(date) {
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDay();
+
+  return `${year}年${month}月${day}日`;
 }

@@ -1,7 +1,9 @@
 <script context="module">
-  export async function load({ fetch }) {
-    const postList =  await fetch('/api/posts.json').then((r) => r.json());
+  import {dateFormatEN} from "../utils/date.js";
 
+  export async function load({ fetch }) {
+    const originPosts =  await fetch('/api/posts.json').then((r) => r.json());
+    const postList = originPosts.map(post => ({...post, date: dateFormatEN(new Date(post.date))}));
     return {
       props: { postList }
     }

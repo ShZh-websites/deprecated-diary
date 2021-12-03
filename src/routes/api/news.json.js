@@ -15,5 +15,5 @@ export function get() {
   ]
   const body = JSON.stringify(news);
 
-  return {body}
+  return { body };
 }

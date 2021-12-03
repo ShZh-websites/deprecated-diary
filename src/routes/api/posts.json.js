@@ -1,17 +1,14 @@
 import * as fs from "fs";
-import * as path from "path";
-import { dateFormat } from "../../utils/date.js";
+import {getPostInfo} from "../../utils/file.js";
 
-export function get() {
+export async function get() {
   let postList = [];
-  fs.readdirSync('posts').forEach(filePath => {
-    const file = path.join('posts', filePath);
-    const date = dateFormat(fs.statSync(file).ctime);
-    const title = filePath.split('.')[0];
-    const link = `/posts/${title}`;
+  const filesPath = fs.readdirSync('posts');
 
-    postList.push({ title, date, link });
-  });
+  await Promise.all(filesPath.map(async filePath => {
+    const postInfo = await getPostInfo(filePath);
+    postList.push(postInfo);
+  }));
   const body = JSON.stringify(postList);
 
   return { body };

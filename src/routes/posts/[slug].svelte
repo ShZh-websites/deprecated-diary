@@ -1,39 +1,36 @@
 <script context="module">
   export async function load({ page, fetch }) {
     const slug = page.params.slug;
-    const article = await fetch(`/api/${slug}.json`).then(r => r.json());
+    const { post, postInfo } = await fetch(`/api/${slug}.json`).then(r => r.json());
 
     return {
-      props: {article}
+      props: { post, postInfo }
     }
   }
 </script>
 
 <script>
   import * as marked from 'marked';
+  import { dateFormatCN } from "../../utils/date.js";
 
-  export let article;
+  export let post;
+  export let postInfo;
 
-  export function formatDate(dateStr) {
-    const dateList = dateStr.split('-');
-    return `${dateList[0]}年${dateList[1]}月${dateList[2]}日`;
-  }
-
-  $: markup = marked.parse(article.post);
+  $: markup = marked.parse(post);
 </script>
 
 <svelte:head>
-  <title>{article.frontMatter.title}</title>
+  <title>{postInfo.title}</title>
 </svelte:head>
 
 
 <article>
-  <h1 class="article-title">{article.frontMatter.title}</h1>
+  <h1 class="article-title">{postInfo.title}</h1>
   {@html markup}
   <div class="article-footer">
     <div class="article-footer-container">
       <p> 沈之豪 </p>
-      <p> {formatDate(article.frontMatter.date)}</p>
+      <p> {dateFormatCN(new Date(postInfo.date))}</p>
     </div>
   </div>
 </article>
@@ -64,10 +61,6 @@
         float: right;
         text-align: center;
       }
-    }
-
-    a {
-      color: black;
     }
   }
 </style>
