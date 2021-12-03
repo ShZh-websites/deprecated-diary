@@ -9,13 +9,13 @@
 </script>
 
 <script>
-  import DateList from "$lib/DateList.svelte";
+  import PostList from "$lib/PostList.svelte";
 
   export let postList;
 </script>
 
 <div class="container">
-  <DateList title={2021} items={postList}/>
+  <PostList year={2021} items={postList}/>
 </div>
 
 <style lang="scss">

@@ -8,7 +8,7 @@
 </script>
 
 <script>
-  import DateList from "$lib/DateList.svelte"
+  import NewsList from "$lib/NewsList.svelte";
 
   export let news
 </script>
@@ -28,7 +28,7 @@
   <p>希望我的文字能给你带来一点启发，如果你觉得对你有帮助，你可以给我买一杯咖啡☕️。</p>
 </section>
 
-<DateList title={"News"} items={news} />
+<NewsList items={news} />
 
 <style lang="scss">
   figure {

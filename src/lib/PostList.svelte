@@ -1,28 +1,24 @@
 <script>
-  export let title;
+  export let year;
   export let items;
 </script>
 
 <div>
-  <h1 class="title">{title}</h1>
+  <h1 class="year">{year}</h1>
   <ul>
     {#each items as item}
       <li>
         <div class="date">{item.date}</div>
-        {#if item.link}
-          <a href={item.link}>
-            <div class="content">{item.title}</div>
-          </a>
-        {:else}
-          <div class="content">{item.content}</div>
-        {/if}
+        <a href={item.link}>
+          <div class="content">{item.title}</div>
+        </a>
       </li>
     {/each}
   </ul>
 </div>
 
 <style lang="scss">
-  .title {
+  .year {
     font-size: 2em;
     font-weight: 300;
     font-family: Lato, sans-serif;
@@ -40,7 +36,7 @@
       font-weight: 430;
       font-family: Lato, sans-serif;
       display: inline-block;
-      width: 7.5rem;
+      width: 4rem;
     }
     .content {
       font-family: "Source Serif Pro", "Noto Serif SC", serif;
