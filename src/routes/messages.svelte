@@ -1,55 +1,55 @@
 <script>
-	import Message from '$lib/Message.svelte';
+  import Message from '$lib/Message.svelte';
 
-	export let messages = [
-		{
-			message: '你好呀，哈哈',
-			reply: '收到，你也好，哈哈',
-			date: '2021-12-04'
-		}
-	];
+  export let messages = [
+    {
+      message: '你好呀，哈哈',
+      reply: '收到，你也好，哈哈',
+      date: '2021-12-04'
+    }
+  ];
 
-	function leaveMessage() {
-		alert('Not implement!');
-	}
+  function leaveMessage() {
+    alert('Not implement!');
+  }
 </script>
 
 <div class="container">
-	<h1>留言版</h1>
-	<button on:click={leaveMessage}>向我匿名留言</button>
-	<ul>
-		{#each messages as message}
-			<li>
-				<Message {message} />
-			</li>
-		{/each}
-	</ul>
+  <h1>留言版</h1>
+  <button on:click={leaveMessage}>向我匿名留言</button>
+  <ul>
+    {#each messages as message}
+      <li>
+        <Message {message} />
+      </li>
+    {/each}
+  </ul>
 </div>
 
 <style lang="scss">
-	.container {
+  .container {
     margin: 0 auto;
-		max-width: 50rem;
-		text-align: center;
+    max-width: 50rem;
+    text-align: center;
 
-		button {
-			margin-bottom: 2rem;
-			padding: 0 15rem;
-			height: 2.5rem;
-			font-size: 15px;
+    button {
+      margin-bottom: 2rem;
+      padding: 0 15rem;
+      height: 2.5rem;
+      font-size: 15px;
 
-			color: white;
-			background-color: black;
-			border-radius: 0.75rem;
-		}
+      color: white;
+      background-color: black;
+      border-radius: 0.75rem;
+    }
 
-		ul {
-			padding-left: 0;
-			li {
-				list-style: none;
-			}
-		}
-	}
+    ul {
+      padding-left: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
 
   @media (max-width: 640px) {
     button {

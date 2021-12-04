@@ -1,14 +1,14 @@
 <script>
-	import Nav from '$lib/Nav.svelte';
-	import Copyright from '$lib/Copyright.svelte';
+  import Nav from '$lib/Nav.svelte';
+  import Copyright from '$lib/Copyright.svelte';
 </script>
 
 <header>
-	<Nav />
+  <Nav />
 </header>
 <main>
-	<slot />
+  <slot />
 </main>
 <footer>
-	<Copyright />
+  <Copyright />
 </footer>

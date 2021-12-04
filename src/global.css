@@ -1,27 +1,27 @@
 :root {
-	--font-en: Lato, sans-serif;
-	--font-sans: "Source Sans Pro", "Noto Sans SC", sans-serif;
-	--font-serif: "Source Serif Pro", "Noto Serif SC", serif;
+  --font-en: Lato, sans-serif;
+  --font-sans: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
+  --font-serif: 'Source Serif Pro', 'Noto Serif SC', serif;
 }
 
 body {
-	overflow: overlay;
+  overflow: overlay;
 }
 
 a {
-	color: black;
+  color: black;
 }
 
 h1 {
-	font-size: 3em;
-	font-weight: 100;
-	font-family: var(--font-sans);
+  font-size: 3em;
+  font-weight: 100;
+  font-family: var(--font-sans);
 }
 
 p {
-	font-family: var(--font-serif);
+  font-family: var(--font-serif);
 }
 
 ul {
-	line-height: 2;
+  line-height: 2;
 }
