@@ -20,7 +20,7 @@
 
 		h1 {
 			font-weight: 100;
-			font-size: 2rem;
+			font-size: 1.7rem;
 			font-family: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
 		}
 

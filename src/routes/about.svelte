@@ -45,4 +45,14 @@
 			}
 		}
 	}
+
+  @media (max-width: 640px) {
+    .payment {
+      flex-direction: column !important;
+
+      .payment-img:nth-of-type(1) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
 </style>

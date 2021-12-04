@@ -32,4 +32,11 @@
 		max-width: 33rem;
 		margin: 0 auto;
 	}
+
+  @media (max-width: 640px) {
+    .container {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
 </style>

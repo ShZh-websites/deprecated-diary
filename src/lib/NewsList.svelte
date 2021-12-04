@@ -40,4 +40,10 @@
 			display: inline-block;
 		}
 	}
+
+  @media (max-width: 640px) {
+    .title {
+      text-align: center;
+    }
+  }
 </style>

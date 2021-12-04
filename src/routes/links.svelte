@@ -71,4 +71,16 @@
 			}
 		}
 	}
+
+  @media (max-width: 640px) {
+    ul {
+      padding-left: 0;
+      margin-left: 0;
+
+      li {
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+    }
+  }
 </style>

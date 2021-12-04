@@ -40,7 +40,7 @@
 
 		button {
 			margin-bottom: 2rem;
-			width: 35rem;
+			padding: 0 15rem;
 			height: 2.5rem;
 			font-size: 15px;
 
@@ -56,4 +56,10 @@
 			}
 		}
 	}
+
+  @media (max-width: 640px) {
+    button {
+      padding: 0 10rem !important;
+    }
+  }
 </style>

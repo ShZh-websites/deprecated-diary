@@ -57,4 +57,11 @@
 		margin: 2em auto;
 		font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
 	}
+
+  @media (max-width: 640px) {
+    .intro {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
 </style>

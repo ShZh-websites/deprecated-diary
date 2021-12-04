@@ -20,7 +20,7 @@
 
 <style lang="scss">
 	nav {
-		padding: 0 30rem;
+    padding: 0 2rem;
 		border-bottom: rgb(229, 231, 235) solid 1px;
 
 		ul {
@@ -39,4 +39,16 @@
 			}
 		}
 	}
+
+  @media (min-width: 640px) {
+    nav {
+      padding: 0 10rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    nav {
+      padding: 0 27rem;
+    }
+  }
 </style>
