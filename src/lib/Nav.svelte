@@ -33,7 +33,7 @@
 				list-style-type: none;
 
 				a {
-					font-family: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
+					font-family: var(--font-sans);
 					text-decoration: none;
 				}
 			}

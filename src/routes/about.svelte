@@ -21,17 +21,8 @@
 		margin: 0 auto;
 		text-align: center;
 
-		h1 {
-			font-weight: 100;
-			font-size: 3em;
-			font-family: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
-		}
-		p {
-			margin-bottom: 2rem;
-			font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
-		}
-
 		.payment {
+      margin-top: 2rem;
 			margin-bottom: 3rem;
 
 			display: flex;

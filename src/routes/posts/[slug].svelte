@@ -42,7 +42,7 @@
 
 		font-size: 18px;
 		font-weight: 400;
-		font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
+		font-family: var(--font-serif);
 
 		.article-title {
 			margin-top: 135px;
@@ -62,6 +62,10 @@
 			}
 		}
 	}
+
+  h1 {
+    font-family: var(--font-serif);
+  }
 
   @media (max-width: 640px) {
     article {

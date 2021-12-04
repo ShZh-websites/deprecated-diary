@@ -17,14 +17,14 @@
 	<title>日记本 | 首页</title>
 </svelte:head>
 
-<figure>
-	<figcaption class="title">ShZh的日记本</figcaption>
+<div class="figure">
+	<h1>ShZh的日记本</h1>
 	<img
 		src="https://res.cloudinary.com/shzh7/image/upload/v1638439744/szh_pg8oum.png"
 		alt="szh"
 		class="avatar"
 	/>
-</figure>
+</div>
 <section class="intro">
 	<p>Hi，我是沈之豪，这是我的日记小站，也是我写自己生活经历和各种感悟的地方。</p>
 	<p>和我的技术博客不同，博客里面全都是冷冰冰的技术博文，而这里的内容更有人情，更有烟火味。</p>
@@ -35,18 +35,13 @@
 <NewsList items={news} />
 
 <style lang="scss">
-	figure {
+	.figure {
 		text-align: center;
 		margin-top: 30px;
 
-		figcaption {
-			font-size: 3em;
-			font-family: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
-		}
-
 		.avatar {
 			width: 14rem;
-			margin-top: 20px;
+			margin: 0 20px;
 			border: solid 2px rgb(229, 231, 235);
 			border-radius: 50%;
 		}
@@ -60,8 +55,7 @@
 
   @media (max-width: 640px) {
     .intro {
-      margin-left: 3rem;
-      margin-right: 3rem;
+      margin: 0 3rem;
     }
   }
 </style>

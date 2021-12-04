@@ -29,14 +29,9 @@
 		margin-bottom: 20rem;
 
 		h1 {
-			font-weight: 100;
-			font-family: Lato, sans-serif;
+      margin-bottom: 7rem;
 			font-size: 7em;
 			transform: scale(0.8, 1.2);
-		}
-		p {
-			margin-top: 7rem;
-			font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
 		}
 	}
 </style>

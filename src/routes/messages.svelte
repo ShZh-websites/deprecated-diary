@@ -28,15 +28,9 @@
 
 <style lang="scss">
 	.container {
+    margin: 0 auto;
 		max-width: 50rem;
-		margin: 0 auto;
 		text-align: center;
-
-		h1 {
-			font-weight: 100;
-			font-size: 3rem;
-			font-family: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
-		}
 
 		button {
 			margin-bottom: 2rem;

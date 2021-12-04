@@ -21,7 +21,7 @@
 	.year {
 		font-size: 2em;
 		font-weight: 300;
-		font-family: Lato, sans-serif;
+		font-family: var(--font-en);
 	}
 
 	div {
@@ -34,12 +34,12 @@
 
 		.date {
 			font-weight: 430;
-			font-family: Lato, sans-serif;
+			font-family: var(--font-en);
 			display: inline-block;
 			width: 4rem;
 		}
 		.content {
-			font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
+			font-family: var(--font-serif);
 			display: inline-block;
 		}
 	}

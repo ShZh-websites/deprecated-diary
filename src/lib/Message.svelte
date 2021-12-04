@@ -19,22 +19,17 @@
 		border-radius: 1.25rem;
 
 		h1 {
-			font-weight: 100;
 			font-size: 1.7rem;
-			font-family: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
 		}
 
-		p {
-			font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
-			&.reply {
-				margin: 0 auto;
-			}
+    .reply {
+      margin: 0 auto;
+    }
 
-			&.date {
-				color: #999999;
-				margin-left: 3rem;
-				align-self: flex-start;
-			}
-		}
+    .date {
+      color: #999;
+      margin-left: 3rem;
+      align-self: flex-start;
+    }
 	}
 </style>

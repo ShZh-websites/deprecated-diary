@@ -35,13 +35,7 @@
 		max-width: 50rem;
 		margin: 0 auto;
 		text-align: center;
-		font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
-
-		h1 {
-			font-weight: 100;
-			font-size: 3rem;
-			font-family: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
-		}
+		font-family: var(--font-serif);
 
 		.fl p {
 			margin-top: 5rem;
@@ -78,8 +72,7 @@
       margin-left: 0;
 
       li {
-        margin-left: 3rem;
-        margin-right: 3rem;
+        margin: 0 3rem;
       }
     }
   }
