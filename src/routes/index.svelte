@@ -50,7 +50,6 @@
   .intro {
     max-width: 43rem;
     margin: 2em auto;
-    font-family: 'Source Serif Pro', 'Noto Serif SC', serif;
   }
 
   @media (max-width: 640px) {
