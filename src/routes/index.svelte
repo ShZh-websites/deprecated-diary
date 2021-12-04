@@ -37,7 +37,7 @@
 
     figcaption {
       font-size: 3em;
-      font-family: "Source Sans Pro", "Noto Sans SC", sans-serif;;
+      font-family: "Source Sans Pro", "Noto Sans SC", sans-serif;
     }
 
     .avatar {
