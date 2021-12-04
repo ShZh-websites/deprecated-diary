@@ -7,13 +7,13 @@
       <a href="/archive">归档</a>
     </li>
     <li>
-      <a href="/">留言</a>
+      <a href="/messages">留言</a>
     </li>
     <li>
-      <a href="/">友链</a>
+      <a href="/links">友链</a>
     </li>
     <li>
-      <a href="/">关于</a>
+      <a href="/about">关于</a>
     </li>
   </ul>
 </nav>
