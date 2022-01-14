@@ -6,6 +6,7 @@
 
 body {
   overflow: overlay;
+  background-color: #eee;
 }
 
 a {
@@ -24,4 +25,11 @@ p {
 
 ul {
   line-height: 2;
+}
+
+.panel {
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 6px 0 rgb(0 0 0 / 12%), 0 1px 6px 0 rgb(0 0 0 / 12%);
 }
