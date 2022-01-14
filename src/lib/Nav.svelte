@@ -20,10 +20,14 @@
 
 <style lang="scss">
   nav {
+    border: 0;
     padding: 0 2rem;
-    border-bottom: rgb(229, 231, 235) solid 1px;
+    box-shadow: 0 0 10px;
+    background-color: rgb(63, 81, 181);
 
     ul {
+      margin: 0;
+      padding: 14px;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
@@ -33,6 +37,7 @@
         list-style-type: none;
 
         a {
+          color: white;
           font-family: var(--font-sans);
           text-decoration: none;
         }
