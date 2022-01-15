@@ -1,4 +1,6 @@
 <script>
+  import Link from "$lib/Link.svelte";
+
   export let myWebsites = [
     {
       link: 'https://shzh.me',
@@ -19,7 +21,7 @@
       {#each myWebsites as myWebsite}
         <li>
           <div class="website-link">
-            <a href={myWebsite.link}>{myWebsite.title}</a>
+            <Link content={myWebsite.title} href="{myWebsite.link}"/>
           </div>
           <div class="website-summary">
             {myWebsite.summary}
