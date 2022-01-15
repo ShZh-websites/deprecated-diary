@@ -1,4 +1,6 @@
 <script context="module">
+  export const prerender = true;
+
   export async function load({ page, fetch }) {
     const slug = page.params.slug;
     const { post, postInfo } = await fetch(`/api/${slug}.json`).then((r) => r.json());
@@ -36,16 +38,20 @@
 
 <style lang="scss">
   article {
-    margin: 0 auto;
     max-width: 45rem;
+    margin: 30px auto 0;
+    padding: 100px 100px 0 100px;
     line-height: 1.5;
 
     font-size: 18px;
     font-weight: 400;
     font-family: var(--font-serif);
 
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+
     .article-title {
-      margin-top: 135px;
       margin-bottom: 81px;
       text-align: center;
 
