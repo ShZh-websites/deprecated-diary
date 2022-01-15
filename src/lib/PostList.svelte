@@ -39,8 +39,27 @@
       width: 4rem;
     }
     .content {
-      font-family: var(--font-serif);
+      cursor: alias;
+      position: relative;
       display: inline-block;
+      font-family: var(--font-serif);
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0.1em;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid currentColor;
+        transform-origin: right center;
+        transform: scaleX(0);
+        transition: transform ease-in-out 0.2s;
+      }
+
+      &:hover::after {
+        transform-origin: left center;
+        transform: scaleX(1);
+      }
     }
   }
 </style>
