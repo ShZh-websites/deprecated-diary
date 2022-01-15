@@ -9,11 +9,11 @@
 </script>
 
 <div class="container">
-  <div class="fl">
+  <div class="fl panel">
     <h1>友情链接</h1>
     <p>暂无，你可以联系我以交换链接</p>
   </div>
-  <div class="other">
+  <div class="other panel">
     <h1>其他链接</h1>
     <ul>
       {#each myWebsites as myWebsite}
@@ -38,13 +38,14 @@
     font-family: var(--font-serif);
 
     .fl p {
-      margin-top: 5rem;
-      margin-bottom: 8rem;
-      color: #666666;
+        display: block;
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+        color: #666666;
     }
 
     .other {
-      margin-bottom: 10rem;
+      padding-bottom: 5rem;
 
       ul {
         text-align: start;
