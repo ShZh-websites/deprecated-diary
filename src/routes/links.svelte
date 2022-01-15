@@ -21,7 +21,7 @@
       {#each myWebsites as myWebsite}
         <li>
           <div class="website-link">
-            <Link content={myWebsite.title} href="{myWebsite.link}"/>
+            <Link content={myWebsite.title} href={myWebsite.link} tooltip={"地址：" + myWebsite.link}/>
           </div>
           <div class="website-summary">
             {myWebsite.summary}
