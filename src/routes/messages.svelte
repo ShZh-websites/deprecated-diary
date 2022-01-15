@@ -29,15 +29,16 @@
 <style lang="scss">
   .container {
     text-align: center;
+    min-height: calc(100vh - 215px);
 
     button {
       margin-bottom: 2rem;
-      padding: 0 15rem;
+      padding: 0 10rem;
       height: 2.5rem;
       font-size: 15px;
 
       color: white;
-      background-color: black;
+      background-color: #ff69b4;
       border-radius: 0.75rem;
     }
 
@@ -46,12 +47,6 @@
       li {
         list-style: none;
       }
-    }
-  }
-
-  @media (max-width: 640px) {
-    button {
-      padding: 0 10rem !important;
     }
   }
 </style>
