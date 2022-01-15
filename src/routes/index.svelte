@@ -39,18 +39,8 @@
 
 <style lang="scss">
   .index-panel {
-    max-width: 50rem;
-    margin-top: 30px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-
     .figure {
       text-align: center;
-
-      h1 {
-        margin-top: 0;
-        margin-bottom: 30px;
-      }
 
       .avatar {
         width: 14rem;

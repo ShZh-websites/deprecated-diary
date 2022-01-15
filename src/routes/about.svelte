@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container panel">
   <h1>自愿付费</h1>
   <p>喜欢我的文章的人，可以自愿付费。你可以使用以下方式付款。</p>
   <div class="payment">
@@ -17,8 +17,6 @@
 
 <style lang="scss">
   .container {
-    max-width: 43rem;
-    margin: 0 auto;
     text-align: center;
 
     .payment {
