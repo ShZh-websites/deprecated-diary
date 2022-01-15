@@ -8,6 +8,7 @@ body {
   margin: 0;
   overflow: overlay;
   background-color: #eee;
+  text-shadow: 0.02em 0.02em 0.05em #9999997f, 0.02em 0.02em 0.1em #9999993f;
 }
 
 a {
