@@ -14,7 +14,7 @@
   }
 </script>
 
-<div class="container">
+<div class="container panel">
   <h1>留言版</h1>
   <button on:click={leaveMessage}>向我匿名留言</button>
   <ul>
@@ -28,8 +28,6 @@
 
 <style lang="scss">
   .container {
-    margin: 0 auto;
-    max-width: 50rem;
     text-align: center;
 
     button {
