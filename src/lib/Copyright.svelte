@@ -1,4 +1,8 @@
-<p class="footer">Copyright 2021 @ Sh-Zh-7</p>
+<script>
+  let year = new Date().getFullYear()
+</script>
+
+<p class="footer">Copyright {year} @ Sh-Zh-7</p>
 
 <style>
   .footer {
