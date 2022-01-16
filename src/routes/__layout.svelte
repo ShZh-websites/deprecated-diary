@@ -12,3 +12,14 @@
 <footer>
   <Copyright />
 </footer>
+
+<img src="static/cat.png" alt="cat">
+
+<style lang="scss">
+  img {
+    position: fixed;
+    width: 10rem;
+    right: 60px;
+    bottom: 5px;
+  }
+</style>
