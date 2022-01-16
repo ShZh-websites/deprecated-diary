@@ -46,3 +46,12 @@ button {
   border-radius: 5px;
   box-shadow: 0 1px 6px 0 rgb(0 0 0 / 12%), 0 1px 6px 0 rgb(0 0 0 / 12%);
 }
+
+
+/* Markdown style */
+h1[id] {
+  font-size: 2rem;
+}
+h2[id] {
+  font-size: 1.5rem;
+}
