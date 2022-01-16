@@ -1,6 +1,17 @@
 <script>
   import Nav from '$lib/Nav.svelte';
   import Copyright from '$lib/Copyright.svelte';
+  import { afterUpdate } from "svelte";
+
+  let cat;
+  afterUpdate(() => {
+    console.log(window.location.pathname);
+    if (window.location.pathname.startsWith("/posts")) {
+      cat.style.display = "none";
+    } else {
+      cat.style.display = "block";
+    }
+  })
 </script>
 
 <header>
@@ -13,7 +24,7 @@
   <Copyright />
 </footer>
 
-<img src="static/cat.png" alt="cat">
+<img bind:this={cat} src="static/cat.png" alt="cat">
 
 <style lang="scss">
   img {
