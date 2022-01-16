@@ -13,21 +13,48 @@
 
 <script>
   import * as marked from 'marked';
+  import { onMount } from "svelte";
   import { dateFormatCN } from '../../utils/date.js';
 
   export let post;
   export let postInfo;
 
-  $: markup = marked.parse(post);
+  let bottomToTopBtn;
+  onMount(() => {
+    document.onscroll = () => {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        bottomToTopBtn.style.display = "block";
+      } else {
+        bottomToTopBtn.style.display = "none";
+      }
+    }
+  })
+
+  let tokens = marked.lexer(post);
+  $: titles = tokens
+    .filter(token => token.type === 'heading')
+    .map(token => ({depth: token.depth, text: token.text}));
+  $: html = marked.parser(tokens, null);
 </script>
 
 <svelte:head>
   <title>{postInfo.title}</title>
 </svelte:head>
 
+<ul class="menu">
+  {#each titles as title}
+    <li>
+      {#if title.depth === 2}
+        &nbsp;&nbsp;&nbsp;&nbsp;
+      {/if}
+      {title.text}
+    </li>
+  {/each}
+</ul>
+
 <article>
   <h1 class="article-title">{postInfo.title}</h1>
-  {@html markup}
+  {@html html}
   <div class="article-footer">
     <div class="article-footer-container">
       <p>沈之豪</p>
@@ -36,7 +63,50 @@
   </div>
 </article>
 
+<button bind:this={bottomToTopBtn} on:click="{() => scrollTo({ top: 0, behavior: 'smooth' })}" class="bottom-to-top">
+  <svg aria-label="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path>
+  </svg>
+</button>
+
 <style lang="scss">
+  ul.menu {
+    list-style: none;
+    float: left;
+
+    li {
+      margin-left: 15px;
+      position: relative;
+
+      &:before {
+        content: " ";
+        position: absolute;
+        background-color: rgb(133, 144, 166);
+
+        display: inline-block;
+        margin-right: 12px;
+        top: 12px;
+        left: -15px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+
+      &:not(:last-child)::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: -12px;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 40px;
+        margin-top: 12px;
+        background: rgba(133, 144, 166, 0.12);
+      }
+    }
+  }
+
   article {
     max-width: 45rem;
     margin: 30px auto 0;
@@ -69,8 +139,23 @@
     }
   }
 
-  h1 {
-    font-family: var(--font-serif);
+  button.bottom-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: #ff69b4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 0 15px;
+    }
   }
 
   @media (max-width: 640px) {
