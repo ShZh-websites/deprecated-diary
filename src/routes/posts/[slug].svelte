@@ -19,13 +19,18 @@
   export let post;
   export let postInfo;
 
+  let menu;
   let bottomToTopBtn;
   onMount(() => {
+    let originMenuTop = menu.style.top;
     document.onscroll = () => {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        bottomToTopBtn.style.display = "block";
+      // 展示back-to-top按钮
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        bottomToTopBtn.style.bottom = "40px";
+        menu.style.top = "20px"
       } else {
-        bottomToTopBtn.style.display = "none";
+        bottomToTopBtn.style.bottom = "-40px";
+        menu.style.top = originMenuTop;
       }
     }
   })
@@ -41,7 +46,7 @@
   <title>{postInfo.title}</title>
 </svelte:head>
 
-<ul class="menu">
+<ul bind:this={menu} class="menu">
   {#each titles as title}
     <li>
       {#if title.depth === 2}
@@ -71,6 +76,7 @@
 
 <style lang="scss">
   ul.menu {
+    position: fixed;
     list-style: none;
     float: left;
 
@@ -140,17 +146,18 @@
   }
 
   button.bottom-to-top {
-    display: none;
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 0;
+    right: 40px;
 
     border-radius: 4px;
     width: 40px;
     height: 40px;
     color: white;
     background-color: #ff69b4;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+
+    transition: bottom ease-in-out 0.2s;
 
     &:hover {
       cursor: pointer;
