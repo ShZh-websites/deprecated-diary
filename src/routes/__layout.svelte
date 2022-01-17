@@ -23,7 +23,7 @@
   <Copyright />
 </footer>
 
-<img bind:this={cat} src="static/cat.png" alt="cat">
+<img bind:this={cat} src="/cat.png" alt="cat">
 
 <style lang="scss">
   img {

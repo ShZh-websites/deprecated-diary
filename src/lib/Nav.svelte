@@ -81,10 +81,6 @@
     }
   }
 
-  .active {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
   @media (min-width: 640px) {
     nav {
       padding: 0 10rem;
