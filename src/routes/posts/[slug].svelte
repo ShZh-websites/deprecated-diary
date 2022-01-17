@@ -13,8 +13,10 @@
 
 <script>
   import * as marked from 'marked';
+  import Comments from "disqus-svelte"
   import { onMount } from "svelte";
   import { dateFormatCN } from '../../utils/date.js';
+  import { page } from "$app/stores";
 
   export let post;
   export let postInfo;
@@ -68,6 +70,10 @@
   </div>
 </article>
 
+<div class="discuss panel">
+  <Comments identifier={$page.params.slug}/>
+</div>
+
 <button bind:this={bottomToTopBtn} on:click="{() => scrollTo({ top: 0, behavior: 'smooth' })}" class="bottom-to-top">
   <svg aria-label="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
     <path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path>
@@ -116,7 +122,7 @@
   article {
     max-width: 45rem;
     margin: 30px auto 0;
-    padding: 100px 100px 0 100px;
+    padding: 100px 100px 30px 100px;
     line-height: 1.5;
 
     font-size: 18px;
@@ -143,6 +149,13 @@
         text-align: center;
       }
     }
+  }
+
+  .discuss {
+    text-align: center;
+    max-width: 45rem;
+    margin: 30px auto 0;
+    padding: 20px 100px;
   }
 
   button.bottom-to-top {
