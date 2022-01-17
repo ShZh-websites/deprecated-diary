@@ -5,7 +5,6 @@
 
   let cat;
   afterUpdate(() => {
-    console.log(window.location.pathname);
     if (window.location.pathname.startsWith("/posts")) {
       cat.style.display = "none";
     } else {
