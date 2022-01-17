@@ -1,20 +1,54 @@
+<script>
+  import { onMount } from "svelte";
+
+  let routes = [
+    {
+      name: '首页',
+      path: '/',
+    }, {
+      name: '归档',
+      path: '/archive',
+    }, {
+      name: '留言',
+      path: '/messages',
+    }, {
+      name: '友链',
+      path: '/links',
+    }, {
+      name: '关于',
+      path: '/about'
+    }
+  ]
+
+  function getNavById(id) {
+    return document.querySelector(`li:nth-of-type(${id + 1}) > a`);
+  }
+
+  let activeIndex;
+  onMount(() => {
+    activeIndex = routes.findIndex(route => route.path === window.location.pathname);
+    let initialActive = getNavById(activeIndex);
+    if (initialActive !== null) {
+      initialActive.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    }
+  })
+  function handleClick(event) {
+    if (activeIndex !== -1) {
+      let prevActive = getNavById(activeIndex);
+      prevActive.style.backgroundColor = "";
+    }
+    event.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
+    activeIndex = +event.target.id;
+  }
+</script>
+
 <nav>
   <ul>
+    {#each routes as route, id}
     <li>
-      <a href="/">首页</a>
+      <a {id} href={route.path} on:click={handleClick}>{route.name}</a>
     </li>
-    <li>
-      <a href="/archive">归档</a>
-    </li>
-    <li>
-      <a href="/messages">留言</a>
-    </li>
-    <li>
-      <a href="/links">友链</a>
-    </li>
-    <li>
-      <a href="/about">关于</a>
-    </li>
+    {/each}
   </ul>
 </nav>
 
@@ -27,22 +61,28 @@
 
     ul {
       margin: 0;
-      padding: 14px;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
 
       li {
         font-size: 1rem;
         list-style-type: none;
 
         a {
+          display: block;
+          padding: 10px 20px;
+          margin: 0 10px;
           color: white;
           font-family: var(--font-sans);
           text-decoration: none;
         }
       }
     }
+  }
+
+  .active {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   @media (min-width: 640px) {
