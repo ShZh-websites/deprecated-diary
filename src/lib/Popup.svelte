@@ -52,7 +52,7 @@
           font-size: 1.125em;
           border: 1px solid #d9d9d9;
           border-radius: 0.1875em;
-          box-shadow: inset 0 1px 1px rgb(0 0 0 / 6%), 0 0 0 3px transparent;
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;
         }
 
         button {
