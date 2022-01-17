@@ -22,16 +22,16 @@
   export let postInfo;
 
   let menu;
-  let bottomToTopBtn;
+  let backToTop;
   onMount(() => {
     let originMenuTop = menu.style.top;
     document.onscroll = () => {
       // 展示back-to-top按钮
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        bottomToTopBtn.style.bottom = "40px";
+        backToTop.style.bottom = "40px";
         menu.style.top = "20px"
       } else {
-        bottomToTopBtn.style.bottom = "-40px";
+        backToTop.style.bottom = "-40px";
         menu.style.top = originMenuTop;
       }
     }
@@ -74,7 +74,7 @@
   <Comments identifier={$page.params.slug}/>
 </div>
 
-<button bind:this={bottomToTopBtn} on:click="{() => scrollTo({ top: 0, behavior: 'smooth' })}" class="bottom-to-top">
+<button bind:this={backToTop} on:click="{() => scrollTo({ top: 0, behavior: 'smooth' })}" class="back-to-top">
   <svg aria-label="回到顶部" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
     <path d="M16.036 19.59a1 1 0 0 1-.997.995H9.032a.996.996 0 0 1-.997-.996v-7.005H5.03c-1.1 0-1.36-.633-.578-1.416L11.33 4.29a1.003 1.003 0 0 1 1.412 0l6.878 6.88c.782.78.523 1.415-.58 1.415h-3.004v7.005z"></path>
   </svg>
@@ -158,7 +158,7 @@
     padding: 20px 100px;
   }
 
-  button.bottom-to-top {
+  button.back-to-top {
     position: fixed;
     bottom: 0;
     right: 40px;
