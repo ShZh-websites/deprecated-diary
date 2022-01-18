@@ -1,16 +1,22 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onDestroy, onMount } from "svelte";
 
   let backToTop;
   onMount(() => {
-    document.onscroll = () => {
-      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        backToTop.style.bottom = '40px';
-      } else {
-        backToTop.style.bottom = '-40px';
-      }
-    };
+    document.addEventListener('scroll', toggleBackToTopBtn);
   });
+
+  onDestroy(() => {
+    document.removeEventListener('scroll', toggleBackToTopBtn)
+  })
+
+  function toggleBackToTopBtn() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      backToTop.style.bottom = '40px';
+    } else {
+      backToTop.style.bottom = '-40px';
+    }
+  }
 </script>
 
 <button bind:this={backToTop} on:click={() => scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -24,7 +30,7 @@
 <style lang="scss">
   button {
     position: fixed;
-    bottom: 0;
+    bottom: -40px;
     right: 40px;
 
     border-radius: 4px;

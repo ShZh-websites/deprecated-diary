@@ -1,19 +1,27 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onDestroy, onMount } from "svelte";
 
   export let headings;
 
   let menu;
+  let originMenuTop;
+
   onMount(() => {
-    let originMenuTop = menu.style.top;
-    document.onscroll = () => {
-      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        menu.style.top = '20px';
-      } else {
-        menu.style.top = originMenuTop;
-      }
-    };
+    originMenuTop = menu.style.top;
+    document.addEventListener('scroll', setMenuPos);
   });
+
+  onDestroy(() => {
+    document.removeEventListener('scroll', setMenuPos);
+  })
+
+  function setMenuPos() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      menu.style.top = '20px';
+    } else {
+      menu.style.top = originMenuTop;
+    }
+  }
 </script>
 
 <ul bind:this={menu}>
