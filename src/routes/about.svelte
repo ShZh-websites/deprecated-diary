@@ -5,19 +5,19 @@
     {
       techName: 'Svelte',
       website: 'https://svelte.dev/',
-      imageUrl: '/svelte_logo.png',
+      imageUrl: 'https://res.cloudinary.com/shzh7/image/upload/v1642506826/diary/svelte_logo_ubzwxh.png',
       description: '🛠️ Cybernetically enhanced web apps.'
     },
     {
       techName: 'SvelteKit',
       website: 'https://kit.svelte.dev/',
-      imageUrl: '/sveltekit_logo.png',
+      imageUrl: 'https://res.cloudinary.com/shzh7/image/upload/v1642506827/diary/sveltekit_logo_cjc5mj.png',
       description: '📦 The fastest way to build Svelte apps.'
     },
     {
       techName: 'Vite',
       website: 'https://vitejs.dev/',
-      imageUrl: '/vite_logo.png',
+      imageUrl: 'https://res.cloudinary.com/shzh7/image/upload/v1642506826/diary/vite_logo_jev5bi.png',
       description: '⚡️ Next Generation Frontend Tooling.'
     }
   ];

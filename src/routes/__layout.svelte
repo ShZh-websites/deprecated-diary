@@ -23,7 +23,10 @@
   <Copyright />
 </footer>
 
-<img bind:this={cat} src="/cat.png" alt="cat" />
+<img
+  bind:this={cat}
+  src="https://res.cloudinary.com/shzh7/image/upload/v1642506825/diary/cat_h3ntgc.png"
+  alt="cat" />
 
 <style lang="scss">
   img {
