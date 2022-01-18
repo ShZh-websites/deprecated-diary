@@ -23,8 +23,8 @@
   <div class="figure">
     <h1>ShZh的日记本</h1>
     <Avatar
-      imgAlt="ShZh's avatar"
-      imgUrl="https://res.cloudinary.com/shzh7/image/upload/v1638439744/szh_pg8oum.png"
+      src="ShZh's avatar"
+      alt="https://res.cloudinary.com/shzh7/image/upload/v1638439744/szh_pg8oum.png"
     />
   </div>
   <section class="intro">

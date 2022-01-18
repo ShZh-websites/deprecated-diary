@@ -92,9 +92,9 @@ li > a.underline::after {
 
 
 /* Markdown style */
-h1[id] {
+article h1[id] {
   font-size: 2rem;
 }
-h2[id] {
+article h2[id] {
   font-size: 1.5rem;
 }

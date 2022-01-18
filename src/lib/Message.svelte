@@ -3,18 +3,18 @@
 </script>
 
 <div class="container">
-  <h1><a href="/messages/0" class="underline">
-    {
-      message.content.length > 20
-        ? message.content.substr(0, 17) + '...'
-        : message.content
-    }
-  </a></h1>
-  <p class="reply">{
-    message.reply.length > 65
+  <h1>
+    <a href="/messages/0" class="underline">
+      {message.content.length > 20
+          ? message.content.substr(0, 17) + '...'
+          : message.content}
+    </a>
+  </h1>
+  <p class="reply">
+    {message.reply.length > 65
       ? message.reply.substr(0, 65) + '...'
-      : message.reply
-  }</p>
+      : message.reply}
+  </p>
   <p class="date">{message.date}</p>
 </div>
 

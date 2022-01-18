@@ -1,10 +1,10 @@
 <script>
-  export let imgUrl;
-  export let imgAlt;
+  export let src;
+  export let alt;
 </script>
 
 <div class="border">
-  <img class="avatar" src={imgUrl} alt={imgAlt} />
+  <img class="avatar" {src} {alt} />
 </div>
 
 <style lang="scss">

@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
+  let activeIndex;
   const routes = [
     {
       name: '首页',
@@ -20,11 +21,6 @@
     }
   ]
 
-  function getNavById(id) {
-    return document.querySelector(`li:nth-of-type(${id + 1}) > a`);
-  }
-
-  let activeIndex;
   onMount(() => {
     activeIndex = routes.findIndex(route => route.path === window.location.pathname);
     let initialActive = getNavById(activeIndex);
@@ -32,6 +28,11 @@
       initialActive.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     }
   })
+
+  function getNavById(id) {
+    return document.querySelector(`li:nth-of-type(${id + 1}) > a`);
+  }
+
   function handleClick(event) {
     if (activeIndex !== -1) {
       let prevActive = getNavById(activeIndex);
@@ -45,9 +46,9 @@
 <nav>
   <ul>
     {#each routes as route, id}
-    <li>
-      <a {id} href={route.path} on:click={handleClick}>{route.name}</a>
-    </li>
+      <li>
+        <a {id} href={route.path} on:click={handleClick}>{route.name}</a>
+      </li>
     {/each}
   </ul>
 </nav>
