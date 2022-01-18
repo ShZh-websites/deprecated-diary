@@ -46,8 +46,7 @@
         content="CC-BY-NC-ND"
         tooltip="署名-禁止商用-禁止修改"
         href="https://en.wikipedia.org/wiki/Creative_Commons_license"
-      />是所有的博文都遵循的
-      版权协议，转载的时候注意了哦。
+      />是所有的博文都遵循的版权协议，转载的时候注意了哦。
     </p>
   </section>
 
