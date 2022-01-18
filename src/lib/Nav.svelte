@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  let routes = [
+  const routes = [
     {
       name: '首页',
       path: '/',
@@ -57,7 +57,7 @@
     border: 0;
     padding: 0 2rem;
     box-shadow: 0 0 10px;
-    background-color: rgb(63, 81, 181);
+    background-color: var(--primary-color);
 
     ul {
       margin: 0;

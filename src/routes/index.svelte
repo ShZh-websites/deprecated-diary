@@ -9,7 +9,7 @@
 
 <script>
   import NewsList from '$lib/NewsList.svelte';
-  import Link from "$lib/Link.svelte";
+  import Link from "$lib/TooltipLink.svelte";
   import Avatar from "$lib/Avatar.svelte";
 
   export let news;
@@ -24,7 +24,8 @@
     <h1>ShZh的日记本</h1>
     <Avatar
       imgAlt="ShZh's avatar"
-      imgUrl="https://res.cloudinary.com/shzh7/image/upload/v1638439744/szh_pg8oum.png" />
+      imgUrl="https://res.cloudinary.com/shzh7/image/upload/v1638439744/szh_pg8oum.png"
+    />
   </div>
   <section class="intro">
     <p>Hi，我是沈之豪，这是我的日记小站，也是我写自己生活经历和各种感悟的地方。</p>
@@ -53,7 +54,7 @@
 
 <style lang="scss">
   .index-panel .figure {
-      text-align: center;
+    text-align: center;
   }
 
   .intro {

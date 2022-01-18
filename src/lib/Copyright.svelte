@@ -1,14 +1,16 @@
 <script>
-  let year = new Date().getFullYear()
+  const year = new Date().getFullYear()
 </script>
 
 <p class="footer">Copyright {year} @ Sh-Zh-7</p>
 
-<style>
+<style lang="scss">
+  $footer-color: #666;
+
   .footer {
     margin: 30px auto;
     text-align: center;
-    color: #666;
+    color: $footer-color;
     font-size: 11px;
   }
 </style>

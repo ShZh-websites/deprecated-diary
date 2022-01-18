@@ -11,7 +11,7 @@
   </div>
   <figcaption>
     <h2>
-      <a href={website} target="_blank">{techName}</a>
+      <a href={website} target="_blank" class="underline">{techName}</a>
     </h2>
     <p>{description}</p>
   </figcaption>
@@ -24,7 +24,7 @@
     margin: 0 20px;
     padding-bottom: 0.5rem;
     border-radius: 0.25rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--box-shadow-in-panel);
 
     .logo-container {
       width: 200px;
@@ -50,28 +50,6 @@
       h2 {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-
-        a {
-          cursor: alias;
-          position: relative;
-
-          &::after {
-            content: '';
-            position: absolute;
-            bottom: 0.1em;
-            left: 0;
-            right: 0;
-            border-bottom: 2px solid currentColor;
-            transform-origin: right center;
-            transform: scaleX(0);
-            transition: transform ease-in-out 0.2s;
-          }
-
-          &:hover::after {
-            transform-origin: left center;
-            transform: scaleX(1);
-          }
-        }
       }
 
       p {

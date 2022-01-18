@@ -1,7 +1,7 @@
 <script>
   import TechCard from "$lib/TechCard.svelte";
 
-  let techniques = [
+  const techniques = [
     {
       techName: "Svelte",
       website: "https://svelte.dev/",
@@ -18,6 +18,16 @@
       imageUrl: "/vite_logo.png",
       description: "⚡️ Next Generation Frontend Tooling."
     },
+  ]
+
+  const payments = [
+    {
+      name: "支付宝付款",
+      url: "https://res.cloudinary.com/shzh7/image/upload/v1637030166/payment/alipay_x0lesm.jpg",
+    }, {
+      name: "微信付款",
+      url: "https://res.cloudinary.com/shzh7/image/upload/v1637030172/payment/wechat_pay_pm5ktx.png"
+    }
   ]
 </script>
 
@@ -40,16 +50,9 @@
     <h1>自愿付费</h1>
     <p>喜欢我的文章的人，可以自愿付费。你可以使用以下方式付款。</p>
     <div class="payment">
-      <img
-        src="https://res.cloudinary.com/shzh7/image/upload/v1637030166/payment/alipay_x0lesm.jpg"
-        alt="支付宝付款"
-        class="payment-img"
-      />
-      <img
-        src="https://res.cloudinary.com/shzh7/image/upload/v1637030172/payment/wechat_pay_pm5ktx.png"
-        alt="微信付款"
-        class="payment-img"
-      />
+      {#each payments as payment}
+        <img src={payment.url} alt={payment.name} class="payment-img" />
+      {/each}
     </div>
   </div>
 </div>
@@ -78,7 +81,7 @@
         height: 22rem;
         margin: 0 2.5rem;
         border-radius: 0.25rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: var(--box-shadow-in-panel);
       }
     }
   }

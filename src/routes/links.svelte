@@ -1,7 +1,7 @@
 <script>
-  import Link from "$lib/Link.svelte";
+  import Link from "$lib/TooltipLink.svelte";
 
-  export let myWebsites = [
+  const myWebsites = [
     {
       link: 'https://shzh.me',
       title: '我的个人主页',
@@ -33,6 +33,8 @@
 </div>
 
 <style lang="scss">
+  $no-data-font-color: #666;
+
   .container {
     max-width: 50rem;
     margin: 0 auto;
@@ -43,7 +45,7 @@
         display: block;
         margin-top: 5rem;
         margin-bottom: 8rem;
-        color: #666666;
+        color: $no-data-font-color;
     }
 
     .other {

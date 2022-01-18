@@ -1,14 +1,21 @@
 :root {
+  --primary-color: #3f51b5;
+  --sencondary-color: #ff69b4;
+  --gray-color: #6e7881;
   --font-en: Lato, sans-serif;
   --font-sans: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
   --font-serif: 'Source Serif Pro', 'Noto Serif SC', serif;
+  --all-text-shadow:  0.02em 0.02em 0.05em #9999997f, 0.02em 0.02em 0.1em #9999993f;
+  --panel-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+  --box-shadow-in-panel: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+/* Normalize */
 body {
   margin: 0;
   overflow: overlay;
   background-color: #eee;
-  text-shadow: 0.02em 0.02em 0.05em #9999997f, 0.02em 0.02em 0.1em #9999993f;
+  text-shadow: var(--all-text-shadow);
 }
 
 a {
@@ -34,9 +41,11 @@ ul {
 }
 
 button {
+  cursor: pointer;
   border-style: none;
 }
 
+/* Common styles */
 .panel {
   width: 50rem;
   padding-top: 20px;
@@ -44,7 +53,41 @@ button {
   margin: 30px auto 0;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 1px 6px 0 rgb(0 0 0 / 12%), 0 1px 6px 0 rgb(0 0 0 / 12%);
+  box-shadow: var(--panel-shadow);
+}
+
+.full-height {
+  min-height: calc(100vh - 215px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+a.underline {
+  cursor: alias;
+  position: relative;
+}
+
+a.underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0.1em;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid currentColor;
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: transform ease-in-out 0.2s;
+}
+
+a.underline:hover::after {
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+li > a.underline::after {
+  border-bottom: 1px solid currentColor;
 }
 
 

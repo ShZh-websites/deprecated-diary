@@ -56,7 +56,6 @@
         }
 
         button {
-          cursor: pointer;
           color: white;
           font-size: 1em;
           font-weight: 500;
@@ -64,10 +63,10 @@
           padding: 0.625em 1.1em;
           border-radius: 0.25em;
           box-shadow: 0 0 0 3px transparent;
-          background-color: rgb(63, 81, 181);
+          background-color: var(--primary-color);
 
           &.cancel {
-            background-color: #6e7881
+            background-color: var(--gray-color)
           }
         }
       }

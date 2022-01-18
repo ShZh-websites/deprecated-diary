@@ -3,7 +3,7 @@
 </script>
 
 <div class="container">
-  <h1><a href="/messages/0">
+  <h1><a href="/messages/0" class="underline">
     {
       message.content.length > 20
         ? message.content.substr(0, 17) + '...'
@@ -19,6 +19,8 @@
 </div>
 
 <style lang="scss">
+  $date-color: #999;
+
   .container {
     margin: 0 3rem;
     display: flex;
@@ -31,28 +33,6 @@
     h1 {
       cursor: alias;
       font-size: 1.7rem;
-
-      a {
-        cursor: alias;
-        position: relative;
-
-        &::after {
-          content: '';
-          position: absolute;
-          bottom: 0.1em;
-          left: 0;
-          right: 0;
-          border-bottom: 2px solid currentColor;
-          transform-origin: right center;
-          transform: scaleX(0);
-          transition: transform ease-in-out 0.2s;
-        }
-
-        &:hover::after {
-          transform-origin: left center;
-          transform: scaleX(1);
-        }
-      }
     }
 
     .reply {
@@ -60,7 +40,7 @@
     }
 
     .date {
-      color: #999;
+      color: $date-color;
       margin-left: 3rem;
       align-self: flex-start;
     }

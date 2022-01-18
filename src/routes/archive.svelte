@@ -23,18 +23,9 @@
   <title>日记本 | 归档</title>
 </svelte:head>
 
-<div class="container panel">
+<div class="panel full-height">
   <PostList year={2021} items={postList} />
 </div>
 
 <style lang="scss">
-  .container {
-    min-height: calc(100vh - 215px);
-  }
-
-  @media (max-width: 640px) {
-    .container {
-      margin: 0 3rem;
-    }
-  }
 </style>

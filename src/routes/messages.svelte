@@ -1,8 +1,8 @@
 <script>
   import Message from '$lib/Message.svelte';
-  import Popup from "$lib/Popup.svelte";
+  import Popup from "$lib/PopUp.svelte";
 
-  export let messages = [
+  const messages = [
     {
       id: 0,
       content: '如何评价《进击的巨人》最终季 Part2 第 2 集？',
@@ -22,7 +22,7 @@
   }
 </script>
 
-<div class="container panel">
+<div class="panel full-height text-center">
   <h1>留言版</h1>
   <button on:click={onDisplay}>向我匿名留言</button>
   <ul>
@@ -39,31 +39,28 @@
 </div>
 
 <style lang="scss">
-  .container {
-    text-align: center;
-    min-height: calc(100vh - 215px);
+  $btn-color: #ff69b4;
+  $btn-hover-color: #ff3ea5;
 
-    button {
-      cursor: pointer;
-      margin-bottom: 2rem;
-      padding: 0 10rem;
-      height: 2.5rem;
-      font-size: 15px;
+  button {
+    margin-bottom: 2rem;
+    padding: 0 10rem;
+    height: 2.5rem;
+    font-size: 15px;
 
-      color: white;
-      background-color: #ff69b4;
-      border-radius: 0.75rem;
+    color: white;
+    background-color: $btn-color;
+    border-radius: 0.75rem;
 
-      &:hover {
-        background-color: #ff3ea5;
-      }
+    &:hover {
+      background-color: $btn-hover-color;
     }
+  }
 
-    ul {
-      padding-left: 0;
-      li {
-        list-style: none;
-      }
+  ul {
+    padding-left: 0;
+    li {
+      list-style: none;
     }
   }
 
