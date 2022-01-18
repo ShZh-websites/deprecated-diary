@@ -78,4 +78,20 @@
       width: 28em !important;
     }
   }
+
+  @media (max-width: 425px) {
+    .popup {
+      width: 22em !important;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .popup {
+      width: 18em !important;
+
+      textarea {
+        height: 5em !important;
+      }
+    }
+  }
 </style>
