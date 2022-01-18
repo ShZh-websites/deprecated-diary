@@ -4,7 +4,7 @@
   export let tooltip;
 </script>
 
-<a href={href} class="underline">
+<a {href} class="underline">
   <b class="tooltip" {tooltip}>{content}</b>
 </a>
 
@@ -51,9 +51,7 @@
       font-weight: 400;
       // Animation
       transform: translateY(-10px);
-      transition:
-        opacity 150ms ease-in,
-        transform 150ms ease-in-out;
+      transition: opacity 150ms ease-in, transform 150ms ease-in-out;
     }
 
     &:hover::after {

@@ -5,7 +5,7 @@
   --font-en: Lato, sans-serif;
   --font-sans: 'Source Sans Pro', 'Noto Sans SC', sans-serif;
   --font-serif: 'Source Serif Pro', 'Noto Serif SC', serif;
-  --all-text-shadow:  0.02em 0.02em 0.05em #9999997f, 0.02em 0.02em 0.1em #9999993f;
+  --all-text-shadow: 0.02em 0.02em 0.05em #9999997f, 0.02em 0.02em 0.1em #9999993f;
   --panel-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
   --box-shadow-in-panel: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
@@ -89,7 +89,6 @@ a.underline:hover::after {
 li > a.underline::after {
   border-bottom: 1px solid currentColor;
 }
-
 
 /* Markdown style */
 article h1[id] {

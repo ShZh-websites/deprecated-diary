@@ -1,5 +1,5 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher } from 'svelte';
 
   let container;
   const dispatch = createEventDispatcher();
@@ -9,7 +9,7 @@
   <div class="popup">
     <h2>匿名提问</h2>
     <div class="form">
-      <textarea placeholder="请输入你想问的问题，这些问题将会在审核后放出"></textarea>
+      <textarea placeholder="请输入你想问的问题，这些问题将会在审核后放出" />
       <div>
         <button type="submit">提交</button>
         <button class="cancel" on:click={() => dispatch('cancel')}>取消</button>
@@ -66,7 +66,7 @@
           background-color: var(--primary-color);
 
           &.cancel {
-            background-color: var(--gray-color)
+            background-color: var(--gray-color);
           }
         }
       }

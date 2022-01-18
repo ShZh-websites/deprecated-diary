@@ -1,11 +1,11 @@
 <script>
-  import Comments from "disqus-svelte"
+  import Comments from 'disqus-svelte';
 
   export let id;
 </script>
 
 <div class="wrapper panel">
-  <Comments identifier={id}/>
+  <Comments identifier={id} />
 </div>
 
 <style lang="scss">

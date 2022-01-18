@@ -1,5 +1,5 @@
 <script>
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 </script>
 
 <p class="footer">Copyright {year} @ Sh-Zh-7</p>

@@ -1,33 +1,37 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
 
   let activeIndex;
   const routes = [
     {
       name: '首页',
-      path: '/',
-    }, {
+      path: '/'
+    },
+    {
       name: '归档',
-      path: '/archive',
-    }, {
+      path: '/archive'
+    },
+    {
       name: '留言',
-      path: '/messages',
-    }, {
+      path: '/messages'
+    },
+    {
       name: '友链',
-      path: '/links',
-    }, {
+      path: '/links'
+    },
+    {
       name: '关于',
       path: '/about'
     }
-  ]
+  ];
 
   onMount(() => {
-    activeIndex = routes.findIndex(route => route.path === window.location.pathname);
+    activeIndex = routes.findIndex((route) => route.path === window.location.pathname);
     let initialActive = getNavById(activeIndex);
     if (initialActive !== null) {
-      initialActive.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+      initialActive.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
     }
-  })
+  });
 
   function getNavById(id) {
     return document.querySelector(`li:nth-of-type(${id + 1}) > a`);
@@ -36,9 +40,9 @@
   function handleClick(event) {
     if (activeIndex !== -1) {
       let prevActive = getNavById(activeIndex);
-      prevActive.style.backgroundColor = "";
+      prevActive.style.backgroundColor = '';
     }
-    event.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
+    event.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
     activeIndex = +event.target.id;
   }
 </script>

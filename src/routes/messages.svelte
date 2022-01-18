@@ -1,12 +1,13 @@
 <script>
   import Message from '$lib/Message.svelte';
-  import Popup from "$lib/PopUp.svelte";
+  import PopUp from '$lib/PopUp.svelte';
 
   const messages = [
     {
       id: 0,
       content: '如何评价《进击的巨人》最终季 Part2 第 2 集？',
-      reply: '我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你我是你爹我是你我是你爹我是你',
+      reply:
+        '我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你我是你爹我是你我是你爹我是你',
       date: '2021-12-04'
     }
   ];
@@ -35,7 +36,7 @@
 </div>
 
 <div class="wrapper" bind:this={popupWrapper}>
-  <Popup on:cancel={onCancel}/>
+  <PopUp on:cancel={onCancel} />
 </div>
 
 <style lang="scss">

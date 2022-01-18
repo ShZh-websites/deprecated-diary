@@ -1,34 +1,37 @@
 <script>
-  import TechCard from "$lib/TechCard.svelte";
+  import TechCard from '$lib/TechCard.svelte';
 
   const techniques = [
     {
-      techName: "Svelte",
-      website: "https://svelte.dev/",
-      imageUrl: "/svelte_logo.png",
-      description: "🛠️ Cybernetically enhanced web apps.",
-    },{
-      techName: "SvelteKit",
-      website: "https://kit.svelte.dev/",
-      imageUrl: "/sveltekit_logo.png",
-      description: "📦 The fastest way to build Svelte apps."
-    }, {
-      techName: "Vite",
-      website: "https://vitejs.dev/",
-      imageUrl: "/vite_logo.png",
-      description: "⚡️ Next Generation Frontend Tooling."
+      techName: 'Svelte',
+      website: 'https://svelte.dev/',
+      imageUrl: '/svelte_logo.png',
+      description: '🛠️ Cybernetically enhanced web apps.'
     },
-  ]
+    {
+      techName: 'SvelteKit',
+      website: 'https://kit.svelte.dev/',
+      imageUrl: '/sveltekit_logo.png',
+      description: '📦 The fastest way to build Svelte apps.'
+    },
+    {
+      techName: 'Vite',
+      website: 'https://vitejs.dev/',
+      imageUrl: '/vite_logo.png',
+      description: '⚡️ Next Generation Frontend Tooling.'
+    }
+  ];
 
   const payments = [
     {
-      name: "支付宝付款",
-      url: "https://res.cloudinary.com/shzh7/image/upload/v1637030166/payment/alipay_x0lesm.jpg",
-    }, {
-      name: "微信付款",
-      url: "https://res.cloudinary.com/shzh7/image/upload/v1637030172/payment/wechat_pay_pm5ktx.png"
+      name: '支付宝付款',
+      url: 'https://res.cloudinary.com/shzh7/image/upload/v1637030166/payment/alipay_x0lesm.jpg'
+    },
+    {
+      name: '微信付款',
+      url: 'https://res.cloudinary.com/shzh7/image/upload/v1637030172/payment/wechat_pay_pm5ktx.png'
     }
-  ]
+  ];
 </script>
 
 <div class="container">

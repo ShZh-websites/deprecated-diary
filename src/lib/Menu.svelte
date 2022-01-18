@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount } from 'svelte';
 
   export let titles;
 
@@ -8,12 +8,12 @@
     let originMenuTop = menu.style.top;
     document.onscroll = () => {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        menu.style.top = "20px"
+        menu.style.top = '20px';
       } else {
         menu.style.top = originMenuTop;
       }
-    }
-  })
+    };
+  });
 </script>
 
 <ul bind:this={menu}>
@@ -28,7 +28,7 @@
 </ul>
 
 <style lang="scss">
-  $list-dot-color:rgb(133, 144, 166);
+  $list-dot-color: rgb(133, 144, 166);
   $list-line-color: rgba(133, 144, 166, 0.12);
 
   ul {
@@ -41,7 +41,7 @@
       position: relative;
 
       &:before {
-        content: " ";
+        content: ' ';
         position: absolute;
         background-color: $list-dot-color;
 
@@ -55,7 +55,7 @@
       }
 
       &:not(:last-child)::after {
-        content: " ";
+        content: ' ';
         position: absolute;
         display: block;
         top: 0;

@@ -1,5 +1,5 @@
 <script>
-  import Link from "$lib/TooltipLink.svelte";
+  import Link from '$lib/TooltipLink.svelte';
 
   const myWebsites = [
     {
@@ -21,7 +21,11 @@
       {#each myWebsites as myWebsite}
         <li>
           <div class="website-link">
-            <Link content={myWebsite.title} href={myWebsite.link} tooltip={"地址：" + myWebsite.link}/>
+            <Link
+              content={myWebsite.title}
+              href={myWebsite.link}
+              tooltip={'地址：' + myWebsite.link}
+            />
           </div>
           <div class="website-summary">
             {myWebsite.summary}
@@ -42,10 +46,10 @@
     font-family: var(--font-serif);
 
     .fl p {
-        display: block;
-        margin-top: 5rem;
-        margin-bottom: 8rem;
-        color: $no-data-font-color;
+      display: block;
+      margin-top: 5rem;
+      margin-bottom: 8rem;
+      color: $no-data-font-color;
     }
 
     .other {
