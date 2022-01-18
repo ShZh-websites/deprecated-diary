@@ -79,9 +79,10 @@
     ul {
       padding-left: 0;
       margin-left: -2em;
+      margin-right: -2em;
 
       li {
-        margin: 0 3rem;
+        margin: 0 3rem !important;
       }
     }
   }

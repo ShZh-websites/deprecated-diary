@@ -54,4 +54,14 @@
       }
     }
   }
+
+  @media (max-width: 426px) {
+    ul {
+      margin-left: -1em;
+
+      .content {
+        margin-left: 0;
+      }
+    }
+  }
 </style>

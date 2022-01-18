@@ -67,6 +67,7 @@
 
     ul {
       margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -91,6 +92,12 @@
   @media (max-width: 750px) {
     a {
       padding: $vertical-padding 1.5em !important;
+    }
+  }
+
+  @media (max-width: 425px) {
+    a {
+      padding: $vertical-padding 1em !important;
     }
   }
 </style>

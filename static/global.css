@@ -32,6 +32,12 @@ h1 {
   font-family: var(--font-sans);
 }
 
+@media (max-width: 425px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
 p {
   font-family: var(--font-serif);
 }
@@ -103,4 +109,13 @@ article h1[id] {
 }
 article h2[id] {
   font-size: 1.5rem;
+}
+
+@media (max-width: 425px) {
+  article h1[id] {
+    font-size: 1.5rem;
+  }
+  article h2[id] {
+    font-size: 1.3rem;
+  }
 }

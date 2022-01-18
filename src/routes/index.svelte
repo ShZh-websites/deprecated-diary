@@ -69,4 +69,10 @@
       margin-top: 3rem;
     }
   }
+
+  @media (max-width: 500px) {
+    .intro {
+      margin-top: 0;
+    }
+  }
 </style>

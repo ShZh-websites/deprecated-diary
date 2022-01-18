@@ -74,4 +74,10 @@
       padding: 0 9rem;
     }
   }
+
+  @media (max-width: 450px) {
+    button {
+      padding: 0 5rem;
+    }
+  }
 </style>

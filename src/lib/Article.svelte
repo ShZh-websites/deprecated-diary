@@ -65,4 +65,10 @@
       padding: 80px 40px 30px 40px;
     }
   }
+
+  @media (max-width: 425px) {
+    .article-title {
+      font-size: 2em !important;
+    }
+  }
 </style>
