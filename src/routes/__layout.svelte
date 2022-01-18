@@ -32,4 +32,10 @@
     right: 60px;
     bottom: 5px;
   }
+
+  @media (max-width: 1280px) {
+    img {
+      display: none !important;
+    }
+  }
 </style>

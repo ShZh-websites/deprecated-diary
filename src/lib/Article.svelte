@@ -25,7 +25,7 @@
 
 <style lang="scss">
   article {
-    max-width: 45rem;
+    width: 45rem;
     margin: 30px auto 0;
     padding: 100px 100px 30px 100px;
     line-height: 1.5;
@@ -53,6 +53,16 @@
         float: right;
         text-align: center;
       }
+    }
+  }
+
+  @media (max-width: 47rem) {
+    article {
+      width: auto !important;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      padding: 80px 40px 30px 40px;
     }
   }
 </style>

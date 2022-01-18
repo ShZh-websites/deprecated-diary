@@ -89,7 +89,12 @@
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 700px) {
+    .cards {
+      flex-direction: column !important;
+      align-items: center;
+    }
+
     .payment {
       flex-direction: column !important;
 

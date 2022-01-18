@@ -75,10 +75,10 @@
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 52em) {
     ul {
       padding-left: 0;
-      margin-left: 0;
+      margin-left: -2em;
 
       li {
         margin: 0 3rem;

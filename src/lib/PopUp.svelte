@@ -9,7 +9,7 @@
   <div class="popup">
     <h2>匿名提问</h2>
     <div class="form">
-      <textarea placeholder="请输入你想问的问题，这些问题将会在审核后放出" />
+      <textarea placeholder="请输入你想问的问题，这些问题将会在审核后放出"></textarea>
       <div>
         <button type="submit">提交</button>
         <button class="cancel" on:click={() => dispatch('cancel')}>取消</button>
@@ -70,6 +70,12 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .popup {
+      width: 28em !important;
     }
   }
 </style>

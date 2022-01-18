@@ -33,7 +33,25 @@
   <title>{postInfo.title}</title>
 </svelte:head>
 
-<Menu {headings} />
+<div class="menu-wrapper">
+  <Menu {headings} />
+</div>
 <Article title={postInfo.title} contentHTML={html} publishDate={new Date(postInfo.date)} />
 <Comments id={$page.params.slug} />
-<BackToTop />
+<div class="back-to-top-wrapper">
+  <BackToTop />
+</div>
+
+<style lang="scss">
+  @media (max-width: 80rem) {
+    .menu-wrapper {
+      display: none;
+    }
+  }
+
+  @media (max-width: 70rem) {
+    .back-to-top-wrapper {
+      display: none;
+    }
+  }
+</style>

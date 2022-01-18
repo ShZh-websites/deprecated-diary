@@ -18,17 +18,19 @@
 </figure>
 
 <style lang="scss">
+  $normal_length: 200px;
+
   figure {
     text-align: center;
-    width: 200px;
+    width: $normal_length;
     margin: 0 20px;
     padding-bottom: 0.5rem;
     border-radius: 0.25rem;
     box-shadow: var(--box-shadow-in-panel);
 
     .logo-container {
-      width: 200px;
-      height: 200px;
+      width: $normal_length;
+      height: $normal_length;
       overflow: hidden;
       border-bottom: 2px solid rgb(229, 231, 235);
 
@@ -55,6 +57,23 @@
       p {
         margin-top: 0;
       }
+    }
+  }
+
+  @media (max-width: 700px) {
+    $grown_length: 230px;
+
+    figure {
+      width: $grown_length;
+
+      &:not(:last-of-type) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .logo-container {
+      width: $grown_length !important;
+      height: $grown_length !important;
     }
   }
 </style>

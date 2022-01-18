@@ -58,9 +58,10 @@
 </nav>
 
 <style lang="scss">
+  $vertical-padding: 10px;
+
   nav {
     border: 0;
-    padding: 0 2rem;
     box-shadow: 0 0 10px;
     background-color: var(--primary-color);
 
@@ -76,8 +77,8 @@
 
         a {
           display: block;
-          padding: 10px 2.2em;
-          margin: 0 10px;
+          margin: 0;
+          padding: $vertical-padding 2.2em;
           color: white;
           font-family: var(--font-sans);
           text-decoration: none;
@@ -86,15 +87,10 @@
     }
   }
 
-  @media (min-width: 640px) {
-    nav {
-      padding: 0 10rem;
-    }
-  }
 
-  @media (min-width: 1280px) {
-    nav {
-      padding: 0 20rem;
+  @media (max-width: 750px) {
+    a {
+      padding: $vertical-padding 1.5em !important;
     }
   }
 </style>

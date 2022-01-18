@@ -15,4 +15,14 @@
     margin: 30px auto 0;
     padding: 20px 100px;
   }
+
+  @media (max-width: 47rem) {
+    .wrapper {
+      width: auto !important;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      padding: 20px 40px;
+    }
+  }
 </style>

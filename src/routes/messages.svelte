@@ -5,7 +5,7 @@
   const messages = [
     {
       id: 0,
-      content: '如何评价《进击的巨人》最终季 Part2 第 2 集？',
+      content: '如何评价《进击的巨人》最终季 Part2 第 2 集？如何评价《进击的巨人》最终季 Part2 第 2 集？',
       reply:
         '我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你爹我是你我是你爹我是你我是你爹我是你',
       date: '2021-12-04'
@@ -67,5 +67,11 @@
 
   .wrapper {
     display: none;
+  }
+
+  @media (max-width: 640px) {
+    button {
+      padding: 0 9rem;
+    }
   }
 </style>

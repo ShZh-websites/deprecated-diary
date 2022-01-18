@@ -48,12 +48,19 @@ button {
 /* Common styles */
 .panel {
   width: 50rem;
-  padding-top: 20px;
-  padding-bottom: 30px;
   margin: 30px auto 0;
+  padding: 20px 2rem 30px;
   background-color: white;
   border-radius: 5px;
   box-shadow: var(--panel-shadow);
+}
+
+@media (max-width: 52rem) {
+  .panel {
+    width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 .full-height {

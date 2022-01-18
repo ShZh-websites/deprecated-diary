@@ -66,7 +66,7 @@
 
   @media (max-width: 640px) {
     .intro {
-      margin: 0 3rem;
+      margin-top: 3rem;
     }
   }
 </style>

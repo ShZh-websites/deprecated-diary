@@ -45,5 +45,13 @@
     .title {
       text-align: center;
     }
+
+    ul {
+      margin-left: 0;
+
+      .content {
+        margin-left: 1.5em;
+      }
+    }
   }
 </style>
