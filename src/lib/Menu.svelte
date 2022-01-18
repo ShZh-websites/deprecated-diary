@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
 
-  export let titles;
+  export let headings;
 
   let menu;
   onMount(() => {
@@ -17,12 +17,12 @@
 </script>
 
 <ul bind:this={menu}>
-  {#each titles as title}
+  {#each headings as heading}
     <li>
-      {#if title.depth === 2}
+      {#if heading.depth === 2}
         &nbsp;&nbsp;&nbsp;&nbsp;
       {/if}
-      {title.text}
+      {heading.text}
     </li>
   {/each}
 </ul>

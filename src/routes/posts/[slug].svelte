@@ -24,7 +24,7 @@
 
   const tokens = marked.lexer(post);
   const html = marked.parser(tokens, null);
-  const titles = tokens
+  const headings = tokens
     .filter((token) => token.type === 'heading')
     .map((token) => ({ depth: token.depth, text: token.text }));
 </script>
@@ -33,7 +33,7 @@
   <title>{postInfo.title}</title>
 </svelte:head>
 
-<Menu {titles} />
+<Menu {headings} />
 <Article title={postInfo.title} contentHTML={html} publishDate={new Date(postInfo.date)} />
 <Comments id={$page.params.slug} />
 <BackToTop />
