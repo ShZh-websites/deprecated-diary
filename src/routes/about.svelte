@@ -4,15 +4,18 @@
   let techniques = [
     {
       techName: "Svelte",
-      imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg",
-      description: "🛠️ Cybernetically enhanced web apps."
+      website: "https://svelte.dev/",
+      imageUrl: "/svelte_logo.png",
+      description: "🛠️ Cybernetically enhanced web apps.",
     },{
       techName: "SvelteKit",
-      imageUrl: "https://kit.svelte.dev/_app/assets/svelte-kit-machine-f9e1f4d5.avif",
+      website: "https://kit.svelte.dev/",
+      imageUrl: "/sveltekit_logo.png",
       description: "📦 The fastest way to build Svelte apps."
     }, {
       techName: "Vite",
-      imageUrl: "https://vitejs.dev/logo.svg",
+      website: "https://vitejs.dev/",
+      imageUrl: "/vite_logo.png",
       description: "⚡️ Next Generation Frontend Tooling."
     },
   ]
@@ -26,6 +29,7 @@
       {#each techniques as technique}
         <TechCard
           techName={technique.techName}
+          website={technique.website}
           imageUrl={technique.imageUrl}
           description={technique.description}
         />
