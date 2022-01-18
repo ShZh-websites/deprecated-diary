@@ -71,7 +71,7 @@
 
         a {
           display: block;
-          padding: 10px 20px;
+          padding: 10px 2.2em;
           margin: 0 10px;
           color: white;
           font-family: var(--font-sans);
@@ -89,7 +89,7 @@
 
   @media (min-width: 1280px) {
     nav {
-      padding: 0 27rem;
+      padding: 0 20rem;
     }
   }
 </style>
