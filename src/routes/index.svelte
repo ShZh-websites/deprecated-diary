@@ -41,12 +41,12 @@
     </p>
     <p>希望我的文字能给你带来一点启发，如果你觉得对你有帮助，你可以给我买一杯咖啡☕️。</p>
     <p>
-      最后提一点，所有的博文都遵循
+      最后提一点，
       <Link
         content="CC-BY-NC-ND"
         tooltip="署名-禁止商用-禁止修改"
         href="https://en.wikipedia.org/wiki/Creative_Commons_license"
-      />
+      />是所有的博文都遵循的
       版权协议，转载的时候注意了哦。
     </p>
   </section>

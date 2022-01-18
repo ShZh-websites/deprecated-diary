@@ -31,4 +31,23 @@
       line-height: 2;
     }
   }
+
+  @media (max-width: 640px) {
+    .container {
+      h2 {
+        margin-left: 0;
+        margin-right: 0;;
+      }
+
+      p {
+        padding: 0;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .intro {
+      margin-top: 0;
+    }
+  }
 </style>
